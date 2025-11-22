@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>E-commerce Support Chatbot</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+      body{font-family:Inter,system-ui,Arial;margin:24px;color:#223}
+      .wrap{max-width:900px;margin:0 auto}
+      .row{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:12px 0}
+      input,button{padding:10px 12px;border:1px solid #d5dbe3;border-radius:10px}
+      button{background:#2163FF;color:#fff;border:none;cursor:pointer}
+      .chat{border:1px solid #d5dbe3;border-radius:12px;padding:12px;min-height:280px;display:flex;flex-direction:column;gap:10px;background:#fff}
+      .u{align-self:flex-end;background:#2163FF;color:#fff;padding:10px 14px;border-radius:12px;max-width:70%}
+      .b{align-self:flex-start;background:#EFF3F8;color:#223;padding:10px 14px;border-radius:12px;max-width:70%}
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <h1>E-commerce Support Chatbot</h1>
+      <p style="color:#667">Grounded answers with order lookup, policy FAQ, and optional GPT fallback.</p>
+
+      <div class="row">
+        <input id="oid" placeholder="Order ID (e.g., 12345)" />
+        <input id="em" placeholder="Email (e.g., alex@example.com)" />
+        <input id="ph" placeholder="Phone (e.g., 9876543210)" />
+      </div>
+
+      <div id="chat" class="chat">
+        <div class="b">Hi! I can help with order status, refunds, and policies. Try: “Where is my order 12345?”</div>
+      </div>
+
+      <div class="row" style="grid-template-columns:1fr auto">
+        <input id="msg" placeholder="Type your question…" />
+        <button id="send">Send</button>
+      </div>
+      <p style="color:#667">Try: <code>Where is my order 12345?</code> • <code>What is the refund policy?</code></p>
+    </div>
+    <script src="./app.js"></script>
+  </body>
+</html>
